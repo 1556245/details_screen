@@ -26,6 +26,7 @@ import com.mkaram.firstcomposeproject.ui.theme.shapes
 @Composable
 fun SingleIssueDesign(
     issue: Issue
+    ,modifier: Modifier
 ) {
     Card(
         shape = shapes.large,
@@ -105,6 +106,6 @@ fun IssueIcon(vector: ImageVector, modifier: Modifier) {
 @Composable
 fun PreviewSingleIssueDesign() {
     FirstComposeProjectTheme {
-        SingleIssueDesign(issueList[0])
+        SingleIssueDesign(issue = issueList[0], modifier = Modifier)
     }
 }

@@ -13,7 +13,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.tooling.preview.Preview
-import com.mkaram.firstcomposeproject.presentation.screens.issueScreen.AllIssueScreen
+import com.mkaram.firstcomposeproject.presentation.screens.reposScreen.Details
+import com.mkaram.firstcomposeproject.presentation.screens.reposScreen.screenData
 import com.mkaram.firstcomposeproject.ui.theme.FirstComposeProjectTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    AllIssueScreen()
+                    Details(screenData = screenData, modifier = Modifier)
 
                 }
             }

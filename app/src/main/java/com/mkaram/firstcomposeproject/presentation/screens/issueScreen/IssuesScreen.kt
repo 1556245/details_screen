@@ -26,7 +26,7 @@ fun AllIssueScreen() {
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ){
             items(issueList){
-                SingleIssueDesign(it)
+                SingleIssueDesign(issue = it, modifier = Modifier)
             }
         }
     }

@@ -33,79 +33,82 @@ fun Details(
     screenData: ScreenData,
     modifier: Modifier,
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-
-        )
-    {
-
+    Column {
         RepoAppBar(title = R.string.details_appbar_title)
-
-        Image(
-
-            painter = painterResource(id = screenData.imgUrl),
-            modifier = Modifier.size(150.dp),
-            contentDescription = screenData.description
-        )
-        Text(
-            text = screenData.name,
-            style = MaterialTheme.typography.headlineSmall,
-            modifier = Modifier.padding(vertical = 16.dp)
-        )
-        Row(
+        Column(
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceEvenly,
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+
+            )
+        {
 
 
-            ) {
-            RepoDetailsItem(screenData.stars,
-                icon = {
-                    Icon(painter = painterResource(id = R.drawable.star_ic), contentDescription ="" ,
+            Image(
+
+                painter = painterResource(id = screenData.imgUrl),
+                modifier = Modifier.size(150.dp),
+                contentDescription = screenData.description
+            )
+            Text(
+                text = screenData.name,
+                style = MaterialTheme.typography.headlineSmall,
+                modifier = Modifier.padding(vertical = 16.dp)
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceEvenly,
+
+
+                ) {
+                RepoDetailsItem(screenData.stars,
+                    icon = {
+                        Icon(painter = painterResource(id = R.drawable.star_ic), contentDescription ="" ,
                             tint = Color.Yellow,
                         )
-                }
-                )
-
-            RepoDetailsItem(title = screenData.language,
-                icon = {
-                    Canvas(modifier = Modifier.size(20.dp)){
-                        drawCircle(Color.Blue)
                     }
-                }
+                )
+
+                RepoDetailsItem(title = screenData.language,
+                    icon = {
+                        Canvas(modifier = Modifier.size(20.dp)){
+                            drawCircle(Color.Blue)
+                        }
+                    }
                 )
 
 
-            RepoDetailsItem(title = screenData.forks) {
-                Image(painter = painterResource(id = R.drawable.fork)
-                    , contentDescription = "" ,
-                    modifier = Modifier.size(20.dp)
+                RepoDetailsItem(title = screenData.forks) {
+                    Image(painter = painterResource(id = R.drawable.fork)
+                        , contentDescription = "" ,
+                        modifier = Modifier.size(20.dp)
+                    )
+                }
+
+            }
+            Text(
+                text = screenData.description
+            )
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            Button(
+                onClick = { },
+                modifier = Modifier.align(Alignment.CenterHorizontally),
+                colors = ButtonDefaults.buttonColors(Color.Blue),
+            ) {
+                Text(
+                    text = "Show Issues",
+                    style = MaterialTheme.typography.headlineSmall
                 )
             }
-
-        }
-        Text(
-            text = screenData.description
-        )
-
-        Spacer(modifier = Modifier.weight(1f))
-
-        Button(
-            onClick = { },
-            modifier = Modifier.align(Alignment.CenterHorizontally),
-            colors = ButtonDefaults.buttonColors(Color.Blue),
-        ) {
-            Text(
-                text = "Show Issues",
-                style = MaterialTheme.typography.headlineSmall
-            )
         }
     }
+
 }
 
 val screenData = ScreenData(
