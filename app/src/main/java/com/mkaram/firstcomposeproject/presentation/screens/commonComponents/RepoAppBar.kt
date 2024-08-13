@@ -25,7 +25,8 @@ fun RepoAppBar(
     modifier: Modifier = Modifier,
     titleStyle : TextStyle = MaterialTheme.typography.titleLarge,
     color : Color = MaterialTheme.colorScheme.primary,
-    showArrowBack : Boolean = true
+    showArrowBack : Boolean = true,
+    onBackButtonClicked :()->Unit ={}
 
     ) {
     CenterAlignedTopAppBar(title = {

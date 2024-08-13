@@ -6,7 +6,15 @@
     <string name="icon_description">Temporal Icon </string>
     <string name="created_at">Created At: </string>
     <string name="issues_appbar_title">Issues</string>
+    <string name="repository_screen_star_icon_description">star icon</string>
+    <string name="repository_screen_avatar_image_description">temp avatar\n</string>
+    <string name="repository_screen_title">Repo List</string>
 
+    // details screen
+    <string name="details_app_bar_title">Details</string>
+    <string name="details_app_bar_back_arrow_description">back arrow button</string>
+    <string name="show_issues">Show Issues</string>
+    <string name="accessbility_details_your_avatar_image">your avatar Image</string>
 
 
 </resources>
