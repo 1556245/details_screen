@@ -16,5 +16,10 @@
     <string name="show_issues">Show Issues</string>
     <string name="accessbility_details_your_avatar_image">your avatar Image</string>
 
+    <string name="github_repo_main_title">Github Repositories</string>
+    <string name="something_went_wrong">Something Went Wrong…</string>
+    <string name="button_text_retry">RETRY</string>
+    <string name="error_image_description">error image</string>
+
 
 </resources>
