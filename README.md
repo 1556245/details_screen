@@ -55,3 +55,13 @@ https://github.com/user-attachments/assets/302675d9-a6b0-4bb3-a8f7-30097941d57e
 
 ![image](https://github.com/user-attachments/assets/c0ed94ee-3b17-46e7-9473-fce35ab52232)
 
+# Error Screen 
+## Features
+
+- Displays an error image and a message indicating something went wrong.
+- Shows the specific error message based on the provided error code.
+- Includes a retry button that triggers a retry action.
+
+![image](https://github.com/user-attachments/assets/2c114caa-96b9-4a5f-9280-fe4c4e8b86e4)
+
+
