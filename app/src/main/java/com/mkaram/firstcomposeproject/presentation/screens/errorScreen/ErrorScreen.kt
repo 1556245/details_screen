@@ -54,7 +54,7 @@ fun ErrorScreenPage(
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            ErrorImage(modifier = Modifier.padding(top = 80.dp))
+            ErrorImage(modifier = Modifier.padding(top = 80.dp),R.drawable.error_2)
 
             Text(
                 text = stringResource(id = R.string.something_went_wrong),
@@ -79,13 +79,13 @@ fun ErrorScreenPage(
 
 
 @Composable
-fun ErrorImage(modifier: Modifier = Modifier) {
+fun ErrorImage(modifier: Modifier = Modifier,id:Int) {
     Box(
         modifier = modifier.size(400.dp),
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.error_img),
+            painter = painterResource(id = id),
             contentDescription = stringResource(id = R.string.error_image_description),
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.FillBounds

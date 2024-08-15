@@ -26,7 +26,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ErrorScreenPage(errorType = "Network Error", onPressingRetry = {})
+                    ErrorScreenPage(errorCode = "505", onPressingRetry = {})
 
                 }
             }
