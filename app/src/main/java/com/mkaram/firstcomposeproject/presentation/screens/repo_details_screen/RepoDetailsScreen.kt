@@ -1,4 +1,4 @@
-package com.example.githubreposapp.presentation.screens.repo_details_screen
+package com.mkaram.firstcomposeproject.presentation.screens.repo_details_screen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -29,14 +29,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.example.githubreposapp.presentation.screens.repo_details_screen.components.DetailsItem
-import com.example.githubreposapp.presentation.screens.repo_details_screen.components.RepoDetailsUiModel
+import com.mkaram.firstcomposeproject.presentation.screens.repo_details_screen.model.RepoDetailsUiModel
 import com.mkaram.firstcomposeproject.R
-import com.mkaram.firstcomposeproject.presentation.screens.commonComponents.RepoAppBar
+import com.mkaram.firstcomposeproject.presentation.commonComponents.RepoAppBar
 import com.mkaram.firstcomposeproject.ui.theme.FirstComposeProjectTheme
 
 @ExperimentalMaterial3Api
@@ -46,7 +44,6 @@ fun RepoDetailsScreen(
     repoDetailsUiModel: RepoDetailsUiModel,
     onClickBack: () -> Unit,
     onClickViewIssues: () -> Unit,
-    navController : NavController
 ) {
     Scaffold(modifier = modifier.fillMaxSize(),
         topBar = {
@@ -169,7 +166,6 @@ fun DetailsScreenPreview() {
             ),
             onClickBack = {},
             onClickViewIssues = {},
-            navController = rememberNavController()
         )
     }
 }
